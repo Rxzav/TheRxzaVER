@@ -1,94 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Rxzaver Discord</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Rxzaver</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #2b2e4a, #141625 60%);
+      color: #e5e7eb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(99,102,241,0.6);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 800;
+      margin: 10px 0;
+      color: #c7d2fe;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 18px;
+      color: #9ca3af;
+    }
+
+    .join-btn {
+      margin-top: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: #6366f1;
+      color: white;
+      font-weight: 600;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(99,102,241,0.45);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .join-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(99,102,241,0.7);
+    }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 50px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat h2 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: #9ca3af;
+      letter-spacing: 1px;
+    }
+
+    /* RULES */
+    .rules {
+      margin-top: 80px;
+    }
+
+    .rules h2 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .rules p {
+      text-align: center;
+      color: #9ca3af;
+      margin-bottom: 40px;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .rule {
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      position: relative;
+    }
+
+    .rule-number {
+      position: absolute;
+      right: 14px;
+      top: 10px;
+      font-weight: 800;
+      font-size: 28px;
+      color: rgba(255,255,255,0.08);
+    }
+
+    .rule h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #c7d2fe;
+    }
+
+    .rule span {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 font-sans">
+<body>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-10 bg-black/20 backdrop-blur-sm border-b border-white/10">
-    <div class="container mx-auto px-4 h-16 flex justify-between items-center">
-      <h2 class="text-xl font-bold text-white">The Rxzaver</h2>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <main class="container mx-auto px-4 py-8 space-y-16 text-center">
-
-    <!-- Logo -->
-    <img src="https://i.postimg.cc/56438mGR/logo.png" alt="The Rxzaver Logo" class="mx-auto w-48 h-48 rounded-full shadow-lg">
-
-    <!-- Title & Description -->
-    <div class="space-y-4">
-      <h1 class="text-6xl font-bold text-white mb-4">The Rxzaver</h1>
-      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Join our thriving Discord community with over 2K+ members and 500K+ messages! Connect, chat, and have fun with fellow members since 2021.
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <img src="https://i.postimg.cc/56438mGR/logo.png" alt="The Rxzaver Logo">
+      <h1>The Rxzaver</h1>
+      <p>
+        Join the ultimate community hub. Where gaming meets conversation.
+        <br>Over <strong>2,000+</strong> members waiting for you.
       </p>
-    </div>
 
-    <!-- Stats -->
-    <div class="flex flex-wrap justify-center gap-6 text-center">
-      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div class="text-3xl font-bold text-white">2K+</div>
-        <div class="text-gray-300">Members</div>
-      </div>
-      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div class="text-3xl font-bold text-white">500K+</div>
-        <div class="text-gray-300">Messages</div>
-      </div>
-      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div class="text-3xl font-bold text-white">2021</div>
-        <div class="text-gray-300">Est. Year</div>
-      </div>
-      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div class="text-3xl font-bold text-white">Level 1</div>
-        <div class="text-gray-300">Boost Level</div>
-      </div>
-    </div>
+      <a class="join-btn" href="https://discord.gg/h4EcW8CB4s" target="_blank">
+        Join the Server →
+      </a>
 
-    <!-- Join Button -->
-    <a href="https://discord.gg/h4EcW8CB4s" target="_blank" class="inline-flex items-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl">
-      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-      </svg>
-      Join The Rxzaver Discord
-    </a>
-
-    <!-- Rules Section -->
-    <section class="max-w-4xl mx-auto mt-16">
-      <h2 class="text-4xl font-bold text-white text-center mb-8">Server Rules</h2>
-      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 grid gap-6">
-
-        <!-- Example rule -->
-        <div class="flex items-start gap-4">
-          <div class="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
-          <div>
-            <h3 class="text-white font-semibold mb-2">Age Requirement</h3>
-            <p class="text-gray-300">You must be 13 years or older to participate in this server.</p>
-          </div>
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat">
+          <h2>2K+</h2>
+          <span>MEMBERS</span>
         </div>
-
-        <!-- Add the rest of your rules in the same format -->
+        <div class="stat">
+          <h2>500K+</h2>
+          <span>MESSAGES</span>
+        </div>
+        <div class="stat">
+          <h2>2021</h2>
+          <span>CREATED</span>
+        </div>
+        <div class="stat">
+          <h2>3</h2>
+          <span>BOOSTS</span>
+        </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="max-w-4xl mx-auto text-center mt-16">
-      <h2 class="text-4xl font-bold text-white mb-8">About Our Community</h2>
-      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <p class="text-gray-300 text-lg leading-relaxed mb-6">
-          The Rxzaver Discord server has been bringing people together since 2021. With over 2,000 members and more than 500,000 messages exchanged, we've built a vibrant community where everyone can feel welcome.
-        </p>
-        <p class="text-gray-300 text-lg leading-relaxed">
-          Our server features various channels for different interests, active moderation to ensure a safe environment, and regular community events. Join us today and become part of our growing family!
-        </p>
+    <!-- RULES -->
+    <section class="rules">
+      <h2>Server Rules</h2>
+      <p>To maintain a healthy community, please follow these guidelines.</p>
+
+      <div class="rules-grid">
+        <div class="rule"><div class="rule-number">#1</div><h3>Rule 1</h3><span>Must be 13+ to join.</span></div>
+        <div class="rule"><div class="rule-number">#2</div><h3>Rule 2</h3><span>English only.</span></div>
+        <div class="rule"><div class="rule-number">#3</div><h3>Rule 3</h3><span>No spamming or mass pinging.</span></div>
+        <div class="rule"><div class="rule-number">#4</div><h3>Rule 4</h3><span>Be respectful to others.</span></div>
+        <div class="rule"><div class="rule-number">#5</div><h3>Rule 5</h3><span>Use the correct channels.</span></div>
+        <div class="rule"><div class="rule-number">#6</div><h3>Rule 6</h3><span>Swearing allowed, keep it limited.</span></div>
+        <div class="rule"><div class="rule-number">#7</div><h3>Rule 7</h3><span>No NSFW content.</span></div>
+        <div class="rule"><div class="rule-number">#8</div><h3>Rule 8</h3><span>No racism or hate speech.</span></div>
+        <div class="rule"><div class="rule-number">#9</div><h3>Rule 9</h3><span>No controversial world events.</span></div>
+        <div class="rule"><div class="rule-number">#10</div><h3>Rule 10</h3><span>No begging.</span></div>
+        <div class="rule"><div class="rule-number">#11</div><h3>Rule 11</h3><span>No self-advertising.</span></div>
+        <div class="rule"><div class="rule-number">#12</div><h3>Rule 12</h3><span>No offsite links.</span></div>
+        <div class="rule"><div class="rule-number">#13</div><h3>Rule 13</h3><span>No suspicious or malicious links.</span></div>
+        <div class="rule"><div class="rule-number">#14</div><h3>Rule 14</h3><span>Do not ping Rxzav.</span></div>
       </div>
     </section>
 
-  </main>
+    <footer>
+      © 2026 The Rxzaver — All rights reserved
+    </footer>
+  </div>
 
 </body>
 </html>
